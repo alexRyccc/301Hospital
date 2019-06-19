@@ -1,0 +1,35 @@
+1、拦截器
+2、过滤器、监听器
+3、启动时执行额外的方法
+
+1、HandlerInterceptor
+	boolean 	preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) 执行控制器方法之前调用
+				返回false表示不会进入控制器
+	
+	 void 	afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+	 			在整个请求处理完成之后调用
+	 			
+	 void 	postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)
+	 			在执行控制器方法之后调用
+	 			
+定义拦截器  	1、编写类实现HandlerInterceptor接口
+	还需要注册	2、在注册类中配置；拦截器 WebMvcConfigurer
+	
+	Spring Boot中定义过滤器、监听器
+	
+		一、基于原生态Servler
+		二、springboot 配置Bean方式
+		
+		原生态Servlet方式
+			@WebServlet
+			@WebFilter
+			@WebListener
+			@Web ServlerComponentScan
+			
+			
+			SpringBoot配置bean方式进行配置
+			
+			ServletRegistrationBean
+			FilterRegistrationBean
+			ServletListenerRegistrationBean
+					

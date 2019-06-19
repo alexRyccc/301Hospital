@@ -1,0 +1,32 @@
+1、了解Restfull
+2、如何提供RESTFull风格
+3、使用Postman测试API
+
+
+RESTfull：	一种架构风格
+			主要用作HTTP协议的API中
+			请求可以使用相同的URL API进行不同的操作
+				增删改查
+			基于不同的请求方式（POST/GET/DELETE/PUT/PAATCH）
+			无状态
+GET(SELECT):从服务器查询，用于得到服务器的资源
+POST(CREATE):用于在服务器创建新的资源，调用insert操作
+PUT(UPDATE):用于删除服务器资源，调用delete操作
+DELETE:用于删除服务器资源，调用delete操作
+PATCH（UPDATE）：在服务器更新资源（客户端提供改变属性）
+
+具体示例：
+	GET/api/emp/  		返回员工列表
+	GET/api/emp/1     	返回员工编号为1的员工信息	
+	POST/api/emp/    	新增员工
+	PUT/api/emp/1		修改员工编号为1的员工信息
+	DELETE/api/emp/1	删除员工编号为1的员工信息
+	DELETE/api/emp/		删除所有的员工信息
+	
+SpringBoot对RESTfull的支持：
+	@RestController
+	@ResponseBody
+	@RequestBody
+	
+	@PathVariable
+	@ResponseEntity:表整个Http响应，可以带状态码

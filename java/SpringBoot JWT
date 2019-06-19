@@ -1,0 +1,22 @@
+JWT 解决登陆问题
+	1、如何对用户进行认证
+	2、SSO（单点登录）
+	
+	
+	1、生成token
+	2、如何解密、认证token
+	3、token如何传输
+	4、token如何保存在本地
+	
+	jwt依赖
+<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.9.1</version>
+</dependency>
+
+跨域问题：终极解决方案
+
+SSO（单点登录）
+	
